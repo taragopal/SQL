@@ -1,0 +1,27 @@
+INNER JOIN Steps 
+
+SELECT title, length 
+FROM film AS f
+INNER JOIN Catagory AS c
+  ON f.film_id = c.catagory_id 
+WHERE c.catagory = 'Documentory'
+  AND f.rating IN ('G' 'PG')
+ORDER BY length DESC;
+
+
+Explain: 
+1. Select the two tables, and build their Alias. 
+2. Find the colums 
+3. Use ON command for the merge 
+4. Use the table key for the logic of join, here the film_id 
+5. WHERE command is used for filtering the results 
+6. Use the condition to support the WHERE command 
+7. For additional conditions use AND 
+8. IN command is used to filter the results
+9. ORDER by <column name>
+
+
+
+
+
+
