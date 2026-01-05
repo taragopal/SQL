@@ -22,6 +22,15 @@ Explain:
 
 
 
+Practice the essentials
+In this exercise you are preparing list of your top paying active customers. The data you will need are the names of the customer sorted by the amount they paid.
+Return the first_name, last_name and amount.
+INNER JOIN the tables you need for this query: payment and customer using the customer_id for the join.
+Ensure only active customers are returned.
+Sort the results in DESCending order by the amount paid.
+
+
+
 
 
 
