@@ -1,0 +1,24 @@
+Extract what you need: In this exercise you will practice preparing date/time elements by using the EXTRACT() function.
+
+
+1 EXTRACT the DAY from payment_date and return this column AS the payment_day.
+Ans: 
+SELECT payment_date,
+  EXTRACT (DAY FROM payment_date) AS payment_day 
+FROM payment;
+
+2 EXTRACT the YEAR from payment_date and return this column AS the payment_year.
+Ans: 
+SELECT payment_date,
+  EXTRACT (YEAR FROM payment_date) AS payment_year
+FROM payment;
+
+3 EXTRACT the HOUR from payment_date and return this column AS the payment_hour.
+Ans: 
+SELECT payment_date,
+  EXTRACT (HOUR FROM payment_date) AS payment_hour 
+FROM payment;
+
+
+
+
