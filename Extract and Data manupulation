@@ -57,12 +57,14 @@ Return a column with a list of comma-separated film titles by using the STRING_A
 Limit the results to films that have a release_year of 2010 AND have a rating of 'G'.
 Ensure that the operation is grouped by the language name.
 
+Ans -- 
+
 SELECT name, 
-	___ AS film_titles
+	STRING_AGG(title, ',') AS film_titles
 FROM film AS f
 INNER JOIN language AS l
   ON f.language_id = l.language_id
-WHERE ___
-  AND ___
-GROUP BY ___;
+WHERE release_year = 2010
+  AND rating = 'G'
+GROUP BY name;
 
