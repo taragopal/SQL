@@ -20,5 +20,33 @@ SELECT payment_date,
 FROM payment;
 
 
+Aggregate Functions: 
+-------------------------
+SELECT rating
+  AVG(replacement_cost) 
+FROM film
+GROUP BY < Column name> 
+
+
+
+Aggregating finances
+In this exercise you would like to learn more about the differences in payments between the customers who are active and those who are not.
+
+Find out the differences in their total number of payments by COUNT()ing the payment_id.
+Find out the differences in their average payments by using AVG().
+Find out the differences in their total payments by using SUM().
+Ensure the aggregate functions GROUP BY whether customer payments are active.
+
+Ans: 
+SELECT active, 
+       COUNT(payment_id) AS num_transactions, 
+       AVG(amount) AS avg_amount, 
+       SUM(amount) AS total_amount
+FROM payment AS p
+INNER JOIN customer AS c
+  ON p.customer_id = c.customer_id
+GROUP BY active;
+
+
 
 
