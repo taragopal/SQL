@@ -1,6 +1,7 @@
 Extract what you need: In this exercise you will practice preparing date/time elements by using the EXTRACT() function.
 
 
+
 1 EXTRACT the DAY from payment_date and return this column AS the payment_day.
 Ans: 
 SELECT payment_date,
